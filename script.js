@@ -44,7 +44,12 @@ const atividade4 = (num) => {
   return tabuada;
 };
 
+const atividade5 = (num) => {
+  return parseInt(num.toString().split("").reverse().join(""));
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
 console.log(atividade4(10));
+console.log(atividade5(2545));
