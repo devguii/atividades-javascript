@@ -18,5 +18,24 @@ const atividade2 = (n, mensagem) => {
   return stringRetorno;
 };
 
+const atividade3 = (num1, num2, operacao) => {
+  switch (operacao) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      if (num2 == 0) {
+        return null;
+      }
+      return num1 / num2;
+    default:
+      return null;
+  }
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
+console.log(atividade3(4, 2, "/"));
