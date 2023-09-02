@@ -36,6 +36,15 @@ const atividade3 = (num1, num2, operacao) => {
   }
 };
 
+const atividade4 = (num) => {
+  tabuada = [];
+  for (i = 0; i < 10; i++) {
+    tabuada[i] = num * (i + 1);
+  }
+  return tabuada;
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
+console.log(atividade4(10));
