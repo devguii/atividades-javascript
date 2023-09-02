@@ -118,6 +118,12 @@ const atividade9 = (lista) => {
   return media / lista.length;
 };
 
+const atividade10 = (lista) => {
+  return lista.sort((a, b) => {
+    return a.idade - b.idade;
+  });
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
@@ -127,3 +133,4 @@ console.log(atividade6("teste vogais"));
 console.log(atividade7("()([])()"));
 console.log(atividade8(5));
 console.log(atividade9(atividade8(5)));
+console.log(atividade10(atividade8(5)));
