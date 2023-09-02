@@ -63,9 +63,32 @@ const atividade6 = (frase) => {
   return numeroVogais;
 };
 
+const atividade7 = (sequencia) => {
+  let pilha = [];
+  for (i = 0; i < sequencia.length; i++) {
+    if (sequencia[i] == "(" || sequencia[i] == "[") {
+      pilha.push(sequencia[i]);
+    } else if (sequencia[i] == ")" || sequencia[i] == "]") {
+      if (pilha.length == 0) {
+        return false;
+      }
+      let c = pilha.pop();
+      if (c == "(" && sequencia[i] != ")") {
+        return false;
+      } else if (c == "[" && sequencia[i] != "]") {
+        return false;
+      }
+    }
+  }
+  if (pilha.length == 0) {
+    return true;
+  } else return false;
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
 console.log(atividade4(10));
 console.log(atividade5(2545));
 console.log(atividade6("teste vogais"));
+console.log(atividade7("()([])()"));
