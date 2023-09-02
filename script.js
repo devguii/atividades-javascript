@@ -85,6 +85,30 @@ const atividade7 = (sequencia) => {
   } else return false;
 };
 
+const atividade8 = (num) => {
+  objetos = [];
+  nomes = [
+    "Adriano",
+    "Guilherme",
+    "Maria",
+    "Julia",
+    "Renato",
+    "Jessica",
+    "Bruno",
+    "Tayna",
+    "Cristopher",
+  ];
+  for (i = 0; i < num; i++) {
+    objeto = {
+      id: i + 1,
+      nome: nomes[Math.floor(Math.random() * nomes.length)],
+      idade: Math.floor(Math.random() * (90 - 18 + 1)) + 18,
+    };
+    objetos.push(objeto);
+  }
+  return objetos;
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
@@ -92,3 +116,4 @@ console.log(atividade4(10));
 console.log(atividade5(2545));
 console.log(atividade6("teste vogais"));
 console.log(atividade7("()([])()"));
+console.log(atividade8(5));
