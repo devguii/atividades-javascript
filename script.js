@@ -48,8 +48,24 @@ const atividade5 = (num) => {
   return parseInt(num.toString().split("").reverse().join(""));
 };
 
+const atividade6 = (frase) => {
+  vogais = ["a", "e", "i", "o", "u"];
+  numeroVogais = 0;
+
+  for (i = 0; i < vogais.length; i++) {
+    for (z = 0; z < frase.length; z++) {
+      if (frase.toLowerCase()[z] == vogais[i]) {
+        numeroVogais++;
+      }
+    }
+  }
+
+  return numeroVogais;
+};
+
 console.log(atividade1(6));
 console.log(atividade2(5, "hello-world"));
 console.log(atividade3(4, 2, "/"));
 console.log(atividade4(10));
 console.log(atividade5(2545));
+console.log(atividade6("teste vogais"));
